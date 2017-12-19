@@ -126,7 +126,7 @@
     <Compile Include="Assets\Scripts\DestroyUponCollision.cs" />
     <Compile Include="Assets\Scripts\Duck.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
-    <Compile Include="Assets\Scripts\Spawn.cs" />
+    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Baker House\Readme.txt" />

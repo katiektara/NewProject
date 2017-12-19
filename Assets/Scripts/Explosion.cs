@@ -14,6 +14,7 @@ public class Explosion : MonoBehaviour {
             
             Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
+          
         }
        
     }
