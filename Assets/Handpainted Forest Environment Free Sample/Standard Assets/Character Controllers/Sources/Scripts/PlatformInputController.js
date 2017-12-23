@@ -29,7 +29,8 @@ function Update () {
 		
 		// Multiply the normalized direction vector by the modified length
 		directionVector = directionVector * directionLength;
-	}
+    }
+    
 	
 	// Rotate the input vector into camera space so up is camera's up and right is camera's right
 	directionVector = Camera.main.transform.rotation * directionVector;
@@ -41,7 +42,7 @@ function Update () {
 	// Apply the direction to the CharacterMotor
 	motor.inputMoveDirection = directionVector;
 	motor.inputJump = Input.GetButton("Jump");
-	
+
 	// Set rotation to the move direction	
 	if (autoRotate && directionVector.sqrMagnitude > 0.01) {
 		var newForward : Vector3 = ConstantSlerp(
@@ -51,7 +52,10 @@ function Update () {
 		);
 		newForward = ProjectOntoPlane(newForward, transform.up);
 		transform.rotation = Quaternion.LookRotation(newForward, transform.up);
-	}
+    }
+
+        
+    
 }
 
 function ProjectOntoPlane (v : Vector3, normal : Vector3) {
@@ -62,6 +66,7 @@ function ConstantSlerp (from : Vector3, to : Vector3, angle : float) {
 	var value : float = Mathf.Min(1, angle / Vector3.Angle(from, to));
 	return Vector3.Slerp(from, to, value);
 }
+
 
 // Require a character controller to be attached to the same game object
 @script RequireComponent (CharacterMotor)
