@@ -122,6 +122,7 @@
     <Compile Include="Assets\JSLizards\Iguana\Scripts\IguanaCharacter.cs" />
     <Compile Include="Assets\JSLizards\Iguana\Scripts\IguanaUserController.cs" />
     <Compile Include="Assets\Scripts\AnimPeng.cs" />
+    <Compile Include="Assets\Scripts\Begin.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DestroyUponCollision.cs" />
     <Compile Include="Assets\Scripts\Duck.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Respawn.cs" />
+    <Compile Include="Assets\Scripts\Spawning.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Baker House\Readme.txt" />

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DestroyUponCollision : MonoBehaviour {
 
-    
+    public Transform Spawnpoint;
+    public bool alive = true;
+
+   
     void OnTriggerEnter(Collider other)
     {
-        // this.gameObject.SetActive(false);
-        //  Debug.Log("Collide");
-        Destroy(this.gameObject);
 
+        Destroy(this.gameObject);
+        Instantiate(this.gameObject, Spawnpoint.transform.position, Quaternion.identity);
+        alive = false;
     }
+
+    
+   
 }
